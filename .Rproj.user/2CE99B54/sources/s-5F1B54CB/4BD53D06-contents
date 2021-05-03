@@ -1,0 +1,12 @@
+library(shinythemes)
+library(EBImage)
+library(shiny)
+library("SuperpixelImageSegmentation") # require c++ installation
+library("OpenImageR")
+library(imager, magrittr)
+
+ui <- fluidPage(
+  tabPanel(
+    
+  )
+)

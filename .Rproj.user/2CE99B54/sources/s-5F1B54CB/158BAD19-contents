@@ -1,0 +1,33 @@
+# https://finnstats.com/index.php/2021/04/12/linear-optimization-using-r/
+
+if (!require("lpSolve")){install.packages("lpSolve")}
+library(lpSolve)
+
+# Set the coefficients of the decision variables
+Objective.in<-c(25,20)  # pdts A, B have profit per unit of $25, 20 resp
+
+# Create constraint matrix
+Const.mat<-matrix(c(20,12,4,4),nrow=2,byrow=TRUE)
+
+# Define the constraints
+Time_constraint<-8*60
+Resouce_constraint<-1800
+
+Const.rhs<-c(Resouce_constraint, Time_constraint)
+
+Const.dir<-c("<","<=") # constr dirn
+
+# now invoke lp() func to optimize
+system.time({ 
+  Optimum <- lp(direction="max", Objective.in, Const.mat, Const.dir, Const.rhs)
+})  # 0.02s
+
+Optimum$solution
+
+# http://www.billseliger.com/test4/  shiny app for airline seat optimizn
+
+'this below is for a mktg problem - campaign optimizn'
+# https://stackoverflow.com/questions/53853801/r-for-solving-linear-programming-marketing-problem
+# https://rpubs.com/nayefahmad/linear-programming
+
+
