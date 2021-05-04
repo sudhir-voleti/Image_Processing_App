@@ -84,13 +84,13 @@ shinyUI(fluidPage(
       tabPanel("Image Filtering",value=3,
                imageOutput("img3"),
                hr(),
-               checkboxGroupInput("Save1", label = h6(""), choices = list("Save"=1),selected = 1),
+               checkboxGroupInput("Save1", label = h6(""), choices = list("Save"=1)),
                downloadButton(outputId = "dn_3",label = "Download")
                ),
       tabPanel("Morphing",value=4,
                imageOutput("img4"),
                hr(),
-               checkboxGroupInput("Save2", label = h6(""), choices = list("Save"=1),selected = 1),
+               checkboxGroupInput("Save2", label = h6(""), choices = list("Save"=1)),
                downloadButton(outputId = "dn_4",label = "Download")
                
                ),
