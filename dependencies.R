@@ -5,5 +5,6 @@ if (!require(SuperpixelImageSegmentation)) {install.packages("SuperpixelImageSeg
 if (!require(OpenImageR)) {install.packages("OpenImageR")};  library(OpenImageR)
 if (!require(imager)) {instalimagerl.packages("imager")};  library(imager)
 if (!require(magrittr)) {install.packages("magrittr")};  library(magrittr)
+if (!require(shinycssloaders)) {install.packages("shinycssloaders")};  library(shinycssloaders)
 if (!require(BiocManager)) {install.packages("BiocManager")};  library(BiocManager)
 BiocManager::install('EBImage')
