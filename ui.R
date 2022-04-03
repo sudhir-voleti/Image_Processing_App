@@ -67,7 +67,10 @@ shinyUI(fluidPage(
       tabPanel("Overview", value=1, 
       
                ),
-      tabPanel("Basic Operations", value=1, 
+      tabPanel("Basic Operations", value=1,
+               h3('Description'),
+               p('Gamma correction function is a function that maps luminance levels to compensate'), br(),
+               p('the non-linear luminance effect of display devices (or sync it to human perceptive bias on brightness).'),
                textOutput("text"),
                imageOutput("img"),
                hr(),
@@ -83,16 +86,22 @@ shinyUI(fluidPage(
                ), 
       tabPanel("Image Filtering",value=3,
                h3('Brief Description'),
-               p('Low pass filter - is the type of frequency domain filter that is used for smoothing the image.'), br(), I
-               p('It attenuates the high frequency components and preserves the low frequency components.
-
-High pass filter - is the type of frequency domain filter that is used for sharpening the image. It attenuates the low frequency components and preserves the high') frequency components.
+               p('Low pass filter - is the type of frequency domain filter that is used for smoothing the image.'), br(),
+               p('It attenuates the high frequency components and preserves the low frequency components.'), br(),
+               p('High pass filter - is the type of frequency domain filter that is used for sharpening the image.'), br(),
+               p('It attenuates the low frequency components and preserves the high frequency components.'),
                imageOutput("img3"),
                hr(),
                checkboxGroupInput("Save1", label = h6(""), choices = list("Save"=1)),
                downloadButton(outputId = "dn_3",label = "Download")
                ),
       tabPanel("Morphing",value=4,
+               h3('Brief Description'),
+               p('Morphological Dilation and Erosion - Dilation adds pixels to the boundaries of objects in an image,'),br(), 
+p('while erosion removes pixels on object boundaries. The number of pixels added'),br(),
+p('or removed from the objects in an image depends on the size and shape '),br(),
+p('of the structuring element used to process the image.'),
+
                imageOutput("img4"),
                hr(),
                checkboxGroupInput("Save2", label = h6(""), choices = list("Save"=1)),
