@@ -1,5 +1,5 @@
 if (!require(shiny)) {install.packages("shiny")};  library(shiny)
-#if (!require(EBImage)) {install.packages("EBImage")};  library(EBImage)
+if (!require(EBImage)) {install.packages("EBImage")};  library(EBImage)
 if (!require(stringi)) {install.packages("stringi")};  library(stringi)
 if (!require(SuperpixelImageSegmentation)) {install.packages("SuperpixelImageSegmentation")};  library(SuperpixelImageSegmentation)
 if (!require(OpenImageR)) {install.packages("OpenImageR")};  library(OpenImageR)
