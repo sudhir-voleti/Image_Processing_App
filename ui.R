@@ -82,6 +82,11 @@ shinyUI(fluidPage(
                downloadButton(outputId = "dn_2",label = "Download")
                ), 
       tabPanel("Image Filtering",value=3,
+               h3('Brief Description'),
+               p('Low pass filter - is the type of frequency domain filter that is used for smoothing the image.'), br(), I
+               p('It attenuates the high frequency components and preserves the low frequency components.
+
+High pass filter - is the type of frequency domain filter that is used for sharpening the image. It attenuates the low frequency components and preserves the high') frequency components.
                imageOutput("img3"),
                hr(),
                checkboxGroupInput("Save1", label = h6(""), choices = list("Save"=1)),
